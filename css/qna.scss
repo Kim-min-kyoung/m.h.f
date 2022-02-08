@@ -1,0 +1,206 @@
+#qna_top {
+    padding: 0 20px;
+    margin: 60px 16px 40px 16px;
+    display: flex;
+    align-items: center;
+    h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+}
+#qna_table {
+    border-collapse: collapse;
+    margin: 30px auto;
+    width: 100%;
+    text-align: center;
+    tr {
+        height: 40px;
+        th {
+            font-weight: normal;
+            background-color: #333;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+        #review_title {
+            text-align: left;
+            padding-left: 40px;
+            width: 50%;
+        }
+    }
+    .innerCell {
+        height: 60px;
+        border-bottom: 1px dashed  #ccc;
+    }
+}
+#qna_inner {
+    #create_title {
+        h1{
+            font-size: 22px;
+        }
+        p {
+            font-size: 14px;
+            padding-left: 20px;
+            padding-top: 12px;
+            color: #3d3d3d;
+        }
+    }
+}
+#qna_main {
+    display: flex;
+    justify-content: center;
+    section {
+        width: 800px;
+        .inner_title {
+            margin: 40px 0;
+            h2 {
+                font-size: 18px;
+            }
+            p {
+                color: #3d3d3d;
+                font-size: 13px;
+                line-height: 2;
+            }
+        }
+        .tpl_policy {
+            font-size: 13px;
+            dd {
+            width: 600px;
+            height: 200px;
+            overflow-y: scroll;
+            border: 1px solid #231f20;
+            padding: 20px;
+            background: #fff;
+            }
+            .inputfix {
+                display: flex;
+                align-items: center;
+                margin: 10px 0 30px 0;
+            }
+            input {
+                margin-right: 5px;
+            }
+        }
+    }
+}
+#qna_Ctable {
+    border-collapse: collapse;
+    margin: 30px 0;
+    tr {
+        height: 70px;
+        th {
+            width: 140px;
+            font-weight: bold;
+            // background-color: #eee;
+            text-align: left;
+            padding-left: 20px;
+        }
+        td {
+            padding-left: 20px;
+            #prd_content {
+                border-radius: 3px;
+            }
+            input[type="text"] {
+                // border: 1px solid #ccc;
+                height: 30px;
+                width: 490px;
+                padding-left: 5px;
+                border-radius: 3px;
+            }
+            textarea {
+                border-radius: 3px;
+            }
+        }
+        .btn {
+            height: 150px;
+            input {
+                cursor: pointer;
+                border: none;
+                border-radius: 5px;
+                background-color: #333;
+                color: #fff;
+                padding: 7px 24px;
+                margin-right: 10px;
+                transition: 0.3s;
+                &:hover {
+                    background-color: #d72020;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+#qna_view_table {
+    border-collapse: collapse;
+    margin: 30px auto;
+    width: 100%;
+    tr {
+        height: 70px;
+        th {
+            width: 300px;
+            font-weight: bold;
+            // background-color: #eee;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+        td {
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            padding-left: 30px;
+            width: 70%;
+            img {
+                width: 200px;
+            }
+        }
+    }
+    .contentCell {
+        text-align: left;
+        height: 100%;
+        td {
+            padding: 30px 150px;
+        }
+    }
+}
+.qnaBtn {
+    // height: 180px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    span, button {
+        display: block;
+        border: none;
+        border-radius: 5px;
+        background-color: #aaa;
+        color: #fff;
+        width: 100px;
+        height: 40px;
+        transition: 0.3s;
+        line-height: 40px;
+        font-size: 14px;
+        margin-right: 10px;
+        &:hover {
+            // background-color: #d72020;
+            // font-weight: bold;
+            background-color: #333;
+            color: #fff;
+        }
+    }
+}
+.btnGO {
+    margin-top: 40px;
+    text-align: left;
+    p {
+        display: inline-block;
+        border: none;
+        border-radius: 5px;
+        background-color: #ddd;
+        color: #7c7c7c;
+        padding: 7px 20px;
+        transition: 0.3s;
+        &:hover {
+            background-color: #aaa;
+            color: #fff;
+            border: none;
+        }
+    }
+}

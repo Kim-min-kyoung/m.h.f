@@ -1,0 +1,81 @@
+#sub_title {
+  padding-top: 60px;
+  padding-bottom: 30px;
+  width: 80%;
+  margin: 0 auto;
+}
+#sub_title h1 {
+  text-align: center;
+  font-size: 18px;
+  padding-left: 20px;
+  text-transform: uppercase;
+}
+
+#joincont_inner {
+  margin: 0 auto;
+  width: 80%;
+  padding-top: 30px;
+  border-top: 2px solid #ccc;
+}
+
+#join_table {
+  border-collapse: collapse;
+  margin: 30px auto;
+}
+#join_table tr {
+  height: 60px;
+}
+#join_table tr th {
+  padding-left: 20px;
+  width: 150px;
+  text-align: left;
+}
+#join_table tr td {
+  padding-left: 20px;
+  margin: 10px 0;
+  width: 400px;
+}
+#join_table tr td input {
+  border-radius: 3px;
+}
+#join_table tr td input[type=text], #join_table tr td input[type=password] {
+  height: 40px;
+  width: 250px;
+  padding-left: 15px;
+  background-color: transparent;
+  border: 1px solid #ccc;
+}
+#join_table tr td input[type=button] {
+  height: 30px;
+  background-color: #ddd;
+}
+#join_table tr td select {
+  height: 30px;
+}
+#join_table tr td label {
+  font-size: 13px;
+  color: #7c7c7c;
+}
+#join_table .long_cell td {
+  height: 80px;
+}
+
+.btn {
+  height: 180px;
+  text-align: center;
+}
+.btn button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  padding: 7px 24px;
+  margin-right: 10px;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+.btn button:hover {
+  background-color: red;
+  font-weight: bold;
+}
