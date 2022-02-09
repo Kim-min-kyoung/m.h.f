@@ -57,7 +57,8 @@
                     </p>
                     <p class="view_total">
                         총 상품금액
-                        <input type="text" name="sum" value="<?= number_format($row['prd_price'])?>" readonly>원
+                        <input type="text" name="sum" value="<?=number_format($row['prd_price'])?>" readonly>원
+                        <input type="hidden" name="initprice" value="<?=$row['prd_price']?>" />
                     </p>
                     <?php
                         if($userid!=="") {
@@ -124,13 +125,6 @@
                 </div>
                 <div id="review_inner">
                     <?php showlist(); ?>
-                </div>
-                <div class="modal hidden">
-                    <div class="bg"></div>
-                    <div class="modalBox">
-                        <p>모달창!!</p>
-                        <button class="closeBtn">✖</button>
-                    </div>
                 </div>
             </div>
         </div>

@@ -10,7 +10,7 @@
                         <th>상품 그룹</th>
                         <td>
                             <input type="radio" name="prd_group" value="LIGHTING" /> 조명
-                            <input type="radio" name="prd_group" value="FURGNISHINGS" /> 가구
+                            <input type="radio" name="prd_group" value="FURGNISHING" /> 가구
                             <input type="radio" name="prd_group" value="COOKING" /> 주방용품
                         </td>
                     </tr> 

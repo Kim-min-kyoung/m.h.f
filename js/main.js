@@ -29,6 +29,19 @@ closeMenu.addEventListener('click', function(){
     // document.querySelector('.blackbg').classList.remove('on');
 })
 
+/* serach modal */
+// const open = () => {
+//   document.querySelector(".modal").classList.remove("hidden");
+// }
+
+// const close = () => {
+//   document.querySelector(".modal").classList.add("hidden");
+// }
+
+// document.querySelector(".openBtn").addEventListener("click", open);
+// document.querySelector(".closeBtn").addEventListener("click", close);
+// document.querySelector(".bg").addEventListener("click", close);
+
 /* review */
 let reviewDiv = true;
 function reviewTable() {
@@ -59,7 +72,7 @@ function Slider(target, type) {
 
   // 슬라이더
   const slider = document.querySelector('.slidebox');
-  const sliderRects = slider.getClientRects()[0];
+  const sliderRects = slider.getClientRects()[0];;
   slider.style["overflow"] = "hidden";
 
   // 슬라이더 화면 컨테이너
@@ -136,7 +149,6 @@ function Slider(target, type) {
     }
   };
 }
-
 const s1 = new Slider(".slider", "H");
 
 setInterval(() => {
@@ -155,30 +167,44 @@ function init() {
 
 function add() {
   hm = document.product_form.amount;
-  sell_price = document.product_form.sum.value;
   sum = document.product_form.sum;
+  sell_price = document.product_form.initprice.value;
+  const number = sell_price.replace(/,/g, "");
   hm.value++;
-  sum.value = parseInt(hm.value) * sell_price;
+  console.log(hm.value);
+  calc = parseInt(hm.value) * number;
+  console.log(calc);
+  sum.value = calc.toLocaleString();
+  console.log(sum.value);
 }
 
 function del() {
   hm = document.product_form.amount;
   sum = document.product_form.sum;
+  sell_price = document.product_form.initprice.value;
+  const number = sell_price.replace(/,/g, "");
+  console.log(sell_price);
   if (hm.value > 1) {
     hm.value--;
-    sum.value = parseInt(hm.value) * sell_price;
+    console.log(hm.value);
+    calc = parseInt(hm.value) * number;
+    sum.value = calc.toLocaleString();
+    console.log(sum.value);
   }
 }
 
 function change() {
   hm = document.product_form.amount;
   sell_price = document.product_form.sum.value;
+  const number = sell_price.replace(/,/g, "");
 
   sum = document.product_form.sum;
   if (hm.value < 0) {
     hm.value = 0;
   }
-  sum.value = parseInt(hm.value) * sell_price;
+  calc = parseInt(hm.value) * number;
+  sum.value = calc.toLocaleString();
+  console.log(sum.value)
 }
 
 /* cart check */
@@ -189,7 +215,8 @@ function checkAll(checked) {
 
 function allchk() { //테이블 상단의 체크버튼
   var c0 = document.getElementById("all_chk");
-
   var chk = document.getElementsByName("check[]");
   for (i = 0; i < chk.length; i++) chk.item(i).checked = c0.checked;
 }
+
+/* category */

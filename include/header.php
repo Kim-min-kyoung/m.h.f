@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="http://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
-    <link rel="stylesheet" href="../css/main.css?after">
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/product.css?after">
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/join.css?after">
@@ -42,9 +42,20 @@
                         </ul>
                     </div>
                 </li>
-                <li>
+                <!-- <li class="openBtn">
                     <a href="#"><i class="fas fa-search"></i></a>
                 </li>
+                <div class="modal hidden">
+                    <div class="bg"></div>
+                    <div class="modalBox">
+                        <div class="searchBox_inner">
+                            <label for="search_txt">검색어를 입력하세요</label>
+                            <input id="search_txt" name="kwd" type="text" title="통합검색">
+                        </div>
+                        <p>검색창이 될 모달창~~~</p>
+                        <button class="closeBtn">✖</button>
+                    </div>
+                </div> -->
             </ul>
             <h1 class="logo">
                 <a href="../index.php">m.h.f</a>

@@ -35,9 +35,9 @@
                         </ul>
                     </div>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="#"><i class="fas fa-search"></i></a>
-                </li>
+                </li> -->
             </ul>
             <h1 class="logo">
                 <a href="#">m.h.f</a>
