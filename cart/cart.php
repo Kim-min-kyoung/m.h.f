@@ -21,64 +21,64 @@
                     <th></th>
                 </tr>
                 <?php
-                $sql = "SELECT * from member
-                          where userid = '$userid'";
-                $result = mysqli_query($conn, $sql);
-                $row = mysqli_fetch_array($result);
-                $custom_id = $row['custom_id'];
+                    $sql = "SELECT * from member
+                            where userid = '$userid'";
+                    $result = mysqli_query($conn, $sql);
+                    $row = mysqli_fetch_array($result);
+                    $custom_id = $row['custom_id'];
 
-                $sql2 = "SELECT * from cart
-                        WHERE custom_id = '$custom_id'";
-                $result2 = mysqli_query($conn, $sql2);
+                    $sql2 = "SELECT * from cart
+                            WHERE custom_id = '$custom_id'";
+                    $result2 = mysqli_query($conn, $sql2);
 
-                while($row2 = mysqli_fetch_array($result2)) {
-                    $id = $row2['id'];
-                    // echo "<tr>";
-                    $sql3 = "SELECT * from product
-                            where prd_id = {$row2['prd_id']}";
-                    $result3 = mysqli_query($conn, $sql3);
+                    while($row2 = mysqli_fetch_array($result2)) {
+                        $id = $row2['id'];
+                        // echo "<tr>";
+                        $sql3 = "SELECT * from product
+                                where prd_id = {$row2['prd_id']}";
+                        $result3 = mysqli_query($conn, $sql3);
 
-                    while($row3 = mysqli_fetch_array($result3)) {
-                        echo "<tr>";
-                        echo "<td><input name='check[]' id='chk' type=checkbox ></td>";
-                        if($row3['prd_photo']) { 
-                            $prd_photo=$row3['prd_photo']; 
-                            echo "<td class=\"img_cell\"><img class='products_cart' src='".$prd_photo."' /></td>"; }
-                        if($row3['prd_name']) {
-                            $prd_name=$row3['prd_name']; 
-                            echo "<td>".$prd_name."</td>"; }
-                        if($row3['prd_price']){
-                            $prd_price=number_format($row3['prd_price']); 
-                            echo"<td>".$prd_price."</td>";}
-                    }
+                        while($row3 = mysqli_fetch_array($result3)) {
+                            echo "<tr>";
+                            echo "<td><input name='check[]' id='chk' type=checkbox ></td>";
+                            if($row3['prd_photo']) { 
+                                $prd_photo=$row3['prd_photo']; 
+                                echo "<td class=\"img_cell\"><img class='products_cart' src='".$prd_photo."' /></td>"; }
+                            if($row3['prd_name']) {
+                                $prd_name=$row3['prd_name']; 
+                                echo "<td>".$prd_name."</td>"; }
+                            if($row3['prd_price']){
+                                $prd_price=number_format($row3['prd_price']); 
+                                echo"<td>".$prd_price."</td>";}
+                        }
 
-                    if($row2['prd_num']){
-                        $prd_num = $row2['prd_num'];
-                        echo "<td>".$prd_num."</td>";
-                    }
+                        if($row2['prd_num']){
+                            $prd_num = $row2['prd_num'];
+                            echo "<td>".$prd_num."</td>";
+                        }
 
-                    if($row2['total_price']){
-                        $total_price = $row2['total_price'];
-                        echo "<td>".$total_price."</td>";}
-                        echo "<form action='../process/cart_delete_proces.php' method='POST'>
-                                <td>
-                                    <button><i class=\"far fa-trash-alt trash\"></i></button>
-                                </td>
-                                </tr>
-                                <input type='hidden' name='id' value='$id' />
-                            </form>";
-                    }
-                    mysqli_close($conn);
+                        if($row2['total_price']){
+                            $total_price = $row2['total_price'];
+                            echo "<td>".$total_price."</td>";}
+                            echo "<form action='../process/cart_delete_proces.php' method='POST'>
+                                    <td>
+                                        <button><i class=\"far fa-trash-alt trash\"></i></button>
+                                    </td>
+                                    </tr>
+                                    <input type='hidden' name='id' value='$id' />
+                                </form>";
+                        }
+                        mysqli_close($conn);
                     ?>
                 </table>
                 <div id="total_div">
                     <div id="total_price">
-                        <p>총 결제금액</p>
-                        <p id="total_num">원</p>
+                        <!-- <p>총 결제금액</p>
+                        <p id="total_num">원</p> -->
                     </div>
                     <div id="total_btn">
                         <span>결제하기</span>
-                        <span><a href="../product/product_list.php">상품 더보기</Link></span>
+                        <span><a href="../product/product.php">상품 더보기</Link></span>
                     </div>
                 </div>
             </div>

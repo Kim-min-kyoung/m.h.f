@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="http://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/main.css?after">
     <link rel="stylesheet" href="../css/product.css?after">
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/join.css?after">
@@ -36,8 +36,19 @@
                             <span><i class="fas fa-times" id="closeIcon"></i></span>
                             <p id="side_logo"><a href="../index.php">m.h.f</a></p>
                             <li><a href="../about/about.php">ABOUT<a></li>
-                            <li><a href="../product/product_list.php">SHOP</a></li>
+                            <li><a href="../product/product.php">SHOP</a></li>
+                            <?php
+                                if($userid !== "") {
+                            ?>
                             <li><a href="../cart/cart.php">CART</a></li>
+                            <?php
+                            }
+                            else if($userid == "") {
+                            ?>
+                            <li><a onclick="event.preventDefault();alert('로그인이 필요한 서비스입니다.');" href="../cart/cart.php">CART</a></li>
+                            <?php
+                                }
+                            ?>
                             <li><a href="../qna/qna.php">Q&A</a></li>
                         </ul>
                     </div>
@@ -75,18 +86,16 @@
                 else if($userid == "") {
                 ?>
                     <li>
-                        <a href="../login/login.php">LOGIN</a>
+                        <a href="./login/login.php">LOGIN</a>
                     </li>
                     <li>
-                        <a 
-                            onclick="event.preventDefault(); 
-                            alert('로그인이 필요한 서비스입니다.');">
+                        <a onclick="event.preventDefault();alert('로그인이 필요한 서비스입니다.');">
                             CART
                         </a>
                     </li>
                     <?php
-                }
-            ?>
+                    }
+                ?>
             </ul>
         </div>
     </header>

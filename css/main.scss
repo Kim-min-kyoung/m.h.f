@@ -47,6 +47,7 @@ header.drop {
     display: flex;
     li {
         padding: 0 20px;
+        cursor: pointer;
     }
     .side_menu {
         width: 15%;
@@ -271,7 +272,8 @@ header.drop {
         width: 250px;
         img {
             height: 250px;
-            box-shadow: 8px 8px 8px 8px rgb(0 0 0 / 20%);
+            width: 250px;
+            box-shadow: 8px 8px 8px 8px #9c9c9c;
             transition: 0.5s;
             &:hover {
                 opacity: 0.4;

@@ -35,9 +35,22 @@
                     </table>
                 </div>           
             </div>
+            <?php
+                if($userid!=="") {
+            ?>
             <div class="btnGO">
                 <a href="qna_write.php"><p>문의하기</p></a>
             </div>
+            <?php
+                }
+                else if($userid==""){
+            ?>
+            <div class="btnGO">
+                <a onclick="event.preventDefault(); alert('로그인이 필요한 서비스입니다.');" href="qna_write.php"><p>문의하기</p></a>
+            </div>
+            <?php
+                }
+            ?>
         </div>
     <main>
 <?php include_once '../include/footer.php' ?> 

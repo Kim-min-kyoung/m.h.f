@@ -16,7 +16,11 @@
             echo "<li class=\"review_name\">{$row2['custom_id']}</li>";
             echo "<li class=\"review_date\">{$row2['wdate']}</li>";
             // echo "<li class=\"review_btn\"><p>삭제</p><li>";
-            // // echo "<li class=\"review_btn\"><button class =\"delete\">X</button><li>";
+            echo "<form action='../process/review_delete_proces.php' method='POST'>";
+            echo "<input type='hidden' name='id' value={$row2['id']} />";
+            echo "<li class=\"review_btn\"><button class =\"delete\">X</button></li>";
+            echo "</form>";
+            // echo "<li class=\"review_btn\"><button class =\"delete\">X</button><li>";
             // echo "<li><a href='#'onclick="('Are U sure?');"> Delete </a></li>";
             echo "</ul>";
         }
@@ -34,7 +38,7 @@
                 <div id="left_top">
                     <h1><?= $row['prd_group'] ?></h1>
                     <span><i class="fas fa-chevron-right"></i></span>
-                    <h2><a href="product_list.php">PRODUCT</a></h2>
+                    <h2><a href="product.php">PRODUCT</a></h2>
                 </div>
             </div>
             <form name="product_form" action="../process/cart_process.php" method="get">
@@ -88,18 +92,32 @@
                     <div id="left_top">
                         <h2>REVIEW</h2>
                     </div>
+                    <?php
+                        if($userid !== "") {
+                    ?>
                     <div id="right_top">
                         <a href="javascript:reviewTable();"><p class="openBtn">리뷰 작성</p></a>
                     </div>
+                    <?php
+                        }
+                        else if($userid == "") {
+                    ?>
+                    <div id="right_top">
+                        <a onclick="event.preventDefault();alert('로그인이 필요한 서비스입니다.');" href="../login/login.php"><p class="openBtn">리뷰 작성</p></a>
+                    </div>
+                    <?php
+                        }
+                    ?>
                 </div>
                 <div id="review_Form" style="display: none;">
                 <form action="../process/review_write_process.php" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="prd_id" value="<?=$row['prd_id']?>">
+                <input type="hidden" name="custom_id" value="<?=$row3['userid']?>">
                     <table id="review_table">
                         <tr>
                             <th>작성자</th>
                             <td>
-                                <?php echo "{$row3['username']}";?>
+                                <?php echo "{$row3['userid']}";?>
                             </td>
                             <th>평가</th>
                             <td>

@@ -5,7 +5,8 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 a {
@@ -34,8 +35,9 @@ li {
     top: 0;
   }
 }
+
 body {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: #333;
@@ -59,20 +61,31 @@ header.drop {
 }
 
 #header_container {
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   padding: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header_menu {
   font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .header_menu li {
   padding: 0 20px;
+  cursor: pointer;
 }
+
 .header_menu .side_menu {
   width: 15%;
   height: 200vh;
@@ -83,40 +96,50 @@ header.drop {
   color: #fff;
   font-weight: normal;
   text-align: center;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   z-index: 2;
 }
+
 .header_menu .side_menu span {
   display: block;
   text-align: right;
   padding-right: 20px;
 }
+
 .header_menu .side_menu span #closeIcon {
   margin-top: 60px;
   margin-bottom: 20px;
   font-size: 24px;
   color: #ccc;
   cursor: pointer;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+
 .header_menu .side_menu span #closeIcon:hover {
   color: #fff;
 }
+
 .header_menu .side_menu #side_logo {
   margin: 30px 0;
   font-size: 34px;
   font-weight: bold;
   color: #fff;
 }
+
 .header_menu .side_menu li {
   margin-bottom: 10px;
   color: #ccc;
   cursor: pointer;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+
 .header_menu .side_menu li:hover {
   color: #fff;
 }
+
 .header_menu .side_menu.on {
   left: 0;
 }
@@ -145,29 +168,40 @@ header.drop {
   background-color: #E8E6E1;
   text-align: center;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 #main_banner img {
   height: 800px;
   width: 100%;
 }
+
 #main_banner #main_text {
   position: absolute;
   top: 25%;
   left: 18%;
   text-align: left;
 }
+
 #main_banner #main_text h1 {
   font-size: 50px;
   line-height: 1.2;
 }
+
 #main_banner #main_text p {
   font-size: 16px;
   color: #5d5d5d;
   margin-top: 15px;
 }
+
 #main_banner #main_text #main_btn {
   display: inline-block;
   padding: 8px 30px;
@@ -178,8 +212,11 @@ header.drop {
 }
 
 #main_select {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 #main_select .main_menu {
   width: 100%;
   height: 500px;
@@ -187,14 +224,18 @@ header.drop {
   text-align: center;
   overflow: hidden;
   position: relative;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
+
 #main_select .main_menu:not(:last-child) {
   margin-right: 15px;
 }
+
 #main_select .main_menu img {
   width: 100%;
 }
+
 #main_select .main_menu .menu_contents {
   background-color: #fff;
   opacity: 70%;
@@ -206,12 +247,14 @@ header.drop {
   font-weight: bold;
   color: #7c7c7c;
 }
+
 #main_select .main_menu .menu_contents .title {
   font-size: 22px;
   font-weight: bold;
   padding: 10px 0;
   color: #3c3c3c;
 }
+
 #main_select .main_menu:hover {
   opacity: 0.4;
   filter: alpha(opacity=40);
@@ -224,47 +267,70 @@ header.drop {
 }
 
 #item_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 #item_list .item_card {
   margin: 30px 5px;
   width: 250px;
 }
+
 #item_list .item_card img {
   height: 250px;
-  box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.2);
+  width: 250px;
+  -webkit-box-shadow: 8px 8px 8px 8px #9c9c9c;
+          box-shadow: 8px 8px 8px 8px #9c9c9c;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
+
 #item_list .item_card img:hover {
   opacity: 0.4;
   filter: alpha(opacity=40);
-  box-shadow: 0;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
 }
 
 footer {
   font-size: 13px;
   background-color: #faf9f2;
 }
+
 footer #fmenu {
   margin-top: 50px;
   height: 50px;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 }
+
 footer #fmenu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 50px;
 }
+
 footer #fmenu ul li {
   padding: 0 20px;
 }
+
 footer #fmenu ul li:not(:last-child) {
   border-right: 1px solid #5d5d5d;
 }
+
 footer #fcopy {
   color: #7c7c7c;
   line-height: 2.5;
@@ -273,8 +339,10 @@ footer #fcopy {
   text-align: center;
   padding-top: 40px;
 }
+
 footer #fcopy #footerLogo {
   font-weight: bold;
   padding-top: 20px;
   text-align: center;
 }
+/*# sourceMappingURL=main.css.map */

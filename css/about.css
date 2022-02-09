@@ -1,13 +1,16 @@
 .about {
   text-align: center;
 }
+
 .about img {
   width: 60%;
   margin: 100px 0;
 }
+
 .about p {
-  font-family: "Noto Serif KR", serif;
+  font-family: 'Noto Serif KR', serif;
   font-size: 16px;
   text-align: center;
   margin: 70px 0;
 }
+/*# sourceMappingURL=about.css.map */

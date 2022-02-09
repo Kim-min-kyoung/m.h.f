@@ -211,6 +211,7 @@ function change() {
 function checkAll(checked) {
   var chk = document.getElementsByName("check[]");
   for (i = 0; i < chk.length; i++) chk.item(i).checked = 'checked';
+  console.log(chk.value);
 }
 
 function allchk() { //테이블 상단의 체크버튼

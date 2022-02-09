@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="http://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap">
-    <link rel="stylesheet" href="css/main.css?after">
+    <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js" defer></script>
     <title>m.h.f</title>
 </head>
@@ -29,8 +29,19 @@
                             <span><i class="fas fa-times" id="closeIcon"></i></span>
                             <p id="side_logo"><a href="index.php">m.h.f</a></p>
                             <li><a href="about/about.php">ABOUT<a></li>
-                            <li><a href="product/product_list.php">SHOP</a></li>
+                            <li><a href="product/product.php">SHOP</a></li>
+                            <?php
+                                if($userid !== "") {
+                            ?>
                             <li><a href="cart/cart.php">CART</a></li>
+                            <?php
+                            }
+                            else if($userid == "") {
+                            ?>
+                            <li><a onclick="event.preventDefault();alert('로그인이 필요한 서비스입니다.');" href="../cart/cart.php">CART</a></li>
+                            <?php
+                                }
+                            ?>
                             <li><a href="qna/qna.php">Q&A</a></li>
                         </ul>
                     </div>
@@ -60,9 +71,7 @@
                         <a href="login/login.php">LOGIN</a>
                     </li>
                     <li>
-                        <a 
-                            onclick="event.preventDefault(); 
-                            alert('로그인이 필요한 서비스입니다.');">
+                        <a onclick="event.preventDefault();alert('로그인이 필요한 서비스입니다.');">
                             CART
                         </a>
                     </li>
@@ -93,7 +102,7 @@
             <div class="main_menu" id="menu_01">
                 <img src="img/select_01.png"></img>
                 <div class="menu_contents">
-                    <a href="product/product_list.php">
+                    <a href="product/product_lighting.php">
                         <p class="title">Lighting</p>
                         <p>조명</p>
                     </a>
@@ -102,8 +111,8 @@
             <div class="main_menu" id="menu_02">
                 <img src="img/select_02.jpg"></img>
                 <div class="menu_contents">
-                    <a href="product/product_list.php">
-                        <p class="title">Furgnishings</p>
+                    <a href="product/product_furnishing.php">
+                        <p class="title">Furnishing</p>
                         <p>가구</p>
                     </a>
                 </div>
@@ -111,7 +120,7 @@
             <div class="main_menu" id="menu_03">
             <img src="img/product/cup_01.jpg"></img>
                 <div class="menu_contents">
-                    <a href="product/product_list.php">
+                    <a href="product/product.php">
                         <p class="title">Cooking</p>
                         <p>주방용품</p>
                     </a>
