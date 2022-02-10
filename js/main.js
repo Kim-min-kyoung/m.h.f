@@ -207,17 +207,22 @@ function change() {
   console.log(sum.value)
 }
 
+
 /* cart check */
 function checkAll(checked) {
   var chk = document.getElementsByName("check[]");
   for (i = 0; i < chk.length; i++) chk.item(i).checked = 'checked';
-  console.log(chk.value);
 }
 
-function allchk() { //테이블 상단의 체크버튼
+//테이블 상단의 체크버튼
+function allchk() {
   var c0 = document.getElementById("all_chk");
   var chk = document.getElementsByName("check[]");
   for (i = 0; i < chk.length; i++) chk.item(i).checked = c0.checked;
 }
 
-/* category */
+// 전체상품 주문 버튼
+function orderAll() {
+  var chk = document.getElementsByName("check[]");
+  for (i = 0; i < chk.length; i++) chk.item(i).checked = 'checked';
+}

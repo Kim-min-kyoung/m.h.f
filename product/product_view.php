@@ -13,15 +13,12 @@
             echo "<ul class=\"review_list\">";
             echo "<li class=\"review_rating\">{$row2['rating']}</li>";
             echo "<li class=\"review_content\">{$row2['review_content']}</li>";
-            echo "<li class=\"review_name\">{$row2['custom_id']}</li>";
+            echo "<li class=\"review_name\">{$row2['username']}</li>";
             echo "<li class=\"review_date\">{$row2['wdate']}</li>";
-            // echo "<li class=\"review_btn\"><p>삭제</p><li>";
             echo "<form action='../process/review_delete_proces.php' method='POST'>";
             echo "<input type='hidden' name='id' value={$row2['id']} />";
             echo "<li class=\"review_btn\"><button class =\"delete\">X</button></li>";
             echo "</form>";
-            // echo "<li class=\"review_btn\"><button class =\"delete\">X</button><li>";
-            // echo "<li><a href='#'onclick="('Are U sure?');"> Delete </a></li>";
             echo "</ul>";
         }
     }
@@ -33,7 +30,6 @@
 <?php include_once '../include/header.php' ?>
     <main>
         <div id="product_inner" class="innerCon_small clearfix">
-        <!-- <input type="hidden" name="no" value="<?=$_GET['no']?>"> -->
             <div id="product_top">
                 <div id="left_top">
                     <h1><?= $row['prd_group'] ?></h1>
@@ -69,7 +65,6 @@
                     ?>
                     <div class="btnGO">
                         <button type="submit">ADD TO CART</button>
-                        <!-- <a href="../cart.php"><p>ADD TO CART</p></a> -->
                     </div>
                     <?php
                         }
@@ -112,12 +107,13 @@
                 <div id="review_Form" style="display: none;">
                 <form action="../process/review_write_process.php" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="prd_id" value="<?=$row['prd_id']?>">
-                <input type="hidden" name="custom_id" value="<?=$row3['userid']?>">
+                <input type="hidden" name="custom_id" value="<?=$row3['custom_id']?>">
+                <input type="hidden" name="username" value="<?=$row3['username']?>">
                     <table id="review_table">
                         <tr>
                             <th>작성자</th>
-                            <td>
-                                <?php echo "{$row3['userid']}";?>
+                            <td id="username">
+                                <?php echo "{$row3['username']}";?>
                             </td>
                             <th>평가</th>
                             <td>
@@ -147,4 +143,4 @@
             </div>
         </div>
     </main>
-    <?php include_once '../include/footer.php' ?>   
+    <?php include_once '../include/footer.php' ?>  

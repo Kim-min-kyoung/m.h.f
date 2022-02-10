@@ -204,3 +204,55 @@
         }
     }
 }
+
+@media screen and (min-width: 840px) and (max-width: 1024px) {
+    #qna_inner {
+        padding: 0 10px;
+        #qna_main {
+            flex-direction: column;
+        }
+    }
+}
+
+@media screen and (min-width: 680px) and (max-width: 839px) {
+    #qna_inner {
+        font-size: 13px;
+        padding: 0 10px;
+        #qna_main {
+            flex-direction: column;
+        }
+    }
+}
+
+@media screen and (min-width: 380px) and (max-width: 679px) {
+    #qna_top {
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        h1 {
+            font-size: 16px;
+            text-align: center;
+        }
+    }
+    #qna_inner {
+        font-size: 13px;
+        padding: 0 10px;
+        #qna_main {
+            flex-direction: column;
+        }
+        #qna_view_table{
+            .contentCell {
+                td {
+                    padding: 20px 60px;
+                }
+            }
+        }
+        .qnaBtn {
+            button, span {
+                width: 80px;
+                height: 30px;
+                line-height: 30px;
+            }
+        }
+    }
+}

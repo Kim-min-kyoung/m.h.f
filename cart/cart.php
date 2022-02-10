@@ -40,7 +40,8 @@
 
                         while($row3 = mysqli_fetch_array($result3)) {
                             echo "<tr>";
-                            echo "<td><input name='check[]' id='chk' type=checkbox ></td>";
+                            echo "<td><input name='check[]' id='chk' type=checkbox value={$row2['total_price']}></td>";
+                            // echo $row2['total_price'];
                             if($row3['prd_photo']) { 
                                 $prd_photo=$row3['prd_photo']; 
                                 echo "<td class=\"img_cell\"><img class='products_cart' src='".$prd_photo."' /></td>"; }
@@ -71,15 +72,10 @@
                         mysqli_close($conn);
                     ?>
                 </table>
-                <div id="total_div">
-                    <div id="total_price">
-                        <!-- <p>총 결제금액</p>
-                        <p id="total_num">원</p> -->
-                    </div>
-                    <div id="total_btn">
-                        <span>결제하기</span>
-                        <span><a href="../product/product.php">상품 더보기</Link></span>
-                    </div>
+                <div id="total_btn">
+                    <span><a href="../product/product.php">상품 더보기</a></span>
+                    <span>선택상품 주문</span>
+                    <span><a onclick="orderAll()">전체상품 주문</a></span>
                 </div>
             </div>
         </div>

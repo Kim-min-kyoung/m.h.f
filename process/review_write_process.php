@@ -3,8 +3,8 @@
     var_dump($_POST);
     
     $conn = mysqli_connect('localhost', 'root', '1234', 'mhf');
-    $sqlstr = "insert into board_review(review_content, rating, wdate, prd_id, custom_id)
-               values('{$_POST['review_content']}', '{$_POST['rating']}', now(), '{$_POST['prd_id']}', '{$_POST['custom_id']}')";
+    $sqlstr = "insert into board_review(review_content, rating, wdate, prd_id, custom_id, username)
+               values('{$_POST['review_content']}', '{$_POST['rating']}', now(), '{$_POST['prd_id']}', '{$_POST['custom_id']}', '{$_POST['username']}')";
     echo $sqlstr;
     $result = mysqli_query($conn, $sqlstr);
     if($result) {

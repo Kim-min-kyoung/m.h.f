@@ -27,7 +27,7 @@
                     <span><i class="fas fa-chevron-right"></i></span>
                     <ul>
                         <li><a href="product_lighting.php">LIGHTING</a></li>
-                        <li><a href="product_furinishing.php">FURGINISHING</a></li>
+                        <li><a href="product_furnishing.php">FURNISHING</a></li>
                         <li><a href="product_cooking.php">COOKING</a></li>
                     </ul>
                 </div>

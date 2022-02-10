@@ -5,6 +5,11 @@
     $username=$_SESSION['username'];
     }
     else $userid="";
+
+    $conn = mysqli_connect('localhost', 'root', '1234', 'mhf');
+    $sql = "select * from product";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_array($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,15 +39,16 @@
                                 if($userid !== "") {
                             ?>
                             <li><a href="cart/cart.php">CART</a></li>
+                            <li><a href="qna/qna.php">Q&A</a></li>
                             <?php
                             }
                             else if($userid == "") {
                             ?>
                             <li><a onclick="event.preventDefault();alert('로그인이 필요한 서비스입니다.');" href="../cart/cart.php">CART</a></li>
+                            <li><a onclick="event.preventDefault();alert('로그인이 필요한 서비스입니다.');" href="qna/qna.php">Q&A</a></li>
                             <?php
                                 }
                             ?>
-                            <li><a href="qna/qna.php">Q&A</a></li>
                         </ul>
                     </div>
                 </li>
@@ -100,7 +106,7 @@
         </div>
         <div id="main_select">
             <div class="main_menu" id="menu_01">
-                <img src="img/select_01.png"></img>
+                <img src="img/select_01.png">
                 <div class="menu_contents">
                     <a href="product/product_lighting.php">
                         <p class="title">Lighting</p>
@@ -133,34 +139,34 @@
             </div>
             <div id="item_list">
                 <div class="item_card">
-                    <img class="item_img" src="img/product/lighting_1.jpeg" alt="레시피 이미지" />
+                    <img class="item_img" src="img/product/light_7.jpg" alt="인기 상품 이미지" />
                 </div>
                 <div class="item_card">
-                    <img class="item_img" src="img/product/lighting_4.jpeg" alt="레시피 이미지" />
+                    <img class="item_img" src="img/product/light_8.jpg" alt="인기 상품 이미지" />
                 </div>
                 <div class="item_card">
-                    <img class="item_img" src="img/product/lighting_7.jpeg" alt="레시피 이미지" />
+                    <img class="item_img" src="img/product/light_11.jpg" alt="인기 상품 이미지" />
                 </div>
                 <div class="item_card">
-                    <img class="item_img" src="img/product/lighting_8.jpeg" alt="레시피 이미지" />
+                    <img class="item_img" src="img/product/light_5.jpg" alt="인기 상품 이미지" />
                 </div>
                 <div class="item_card">
-                    <img class="item_img" src="img/product/lighting_1.jpeg" alt="레시피 이미지" />
+                    <img class="item_img" src="img/product/cup_04.jpg" alt="인기 상품 이미지" />
                 </div>
                 <div class="item_card">
-                    <img class="item_img" src="img/product/lighting_2.jpeg" alt="레시피 이미지" />
+                    <img class="item_img" src="img/product/plate_01.jpg" alt="인기 상품 이미지" />
                 </div>
                 <div class="item_card">
-                    <img class="item_img" src="img/product/lighting_5.jpeg" alt="레시피 이미지" />
+                    <img class="item_img" src="img/product/plate_02.jpg" alt="인기 상품 이미지" />
                 </div>
                 <div class="item_card">
-                    <img class="item_img" src="img/product/lighting_11.jpeg" alt="레시피 이미지" />
+                    <img class="item_img" src="img/product/sopa_5.jpg" alt="인기 상품 이미지" />
                 </div>
                 <div class="item_card">
-                    <img class="item_img" src="img/product/lighting_5.jpeg" alt="레시피 이미지" />
+                    <img class="item_img" src="img/product/sopa_2.jpg" alt="인기 상품 이미지" />
                 </div>
                 <div class="item_card">
-                    <img class="item_img" src="img/product/lighting_11.jpeg" alt="레시피 이미지" />
+                    <img class="item_img" src="img/product/table_1.jpg" alt="인기 상품 이미지" />
                 </div>
             </div>
         </div>
