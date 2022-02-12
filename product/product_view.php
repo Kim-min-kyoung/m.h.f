@@ -1,5 +1,4 @@
 <?php
-//  echo $_GET['no'];
     $conn = mysqli_connect('localhost', 'root', '1234', 'mhf');
     $sql = "select * from product where prd_id={$_GET['no']}";
     $result = mysqli_query($conn, $sql);
@@ -27,8 +26,8 @@
     $row3 = mysqli_fetch_array($result3);
     
 ?>
-<?php include_once '../include/header.php' ?>
     <main>
+<?php include_once '../include/header.php' ?>
         <div id="product_inner" class="innerCon_small clearfix">
             <div id="product_top">
                 <div id="left_top">
@@ -39,10 +38,10 @@
             </div>
             <form name="product_form" action="../process/cart_process.php" method="get">
             <input type="hidden" name="no" value="<?=$_GET['no']?>">
-                <section id="product_view_left">
+                <div id="product_view_left">
                     <img src="<?=$row['prd_photo']?>" />
-                </section>
-                <section id="product_view_right">
+                </div>
+                <div id="product_view_right">
                     <h2>
                         <span class="view_group"><?= $row['prd_group'] ?></span><br/>
                         <span class="view_name"><?= $row['prd_name'] ?></span>
@@ -61,25 +60,23 @@
                         <input type="hidden" name="initprice" value="<?=$row['prd_price']?>" />
                     </p>
                     <?php
-                        if($userid!=="") {
+                        if($userid !== ""){
                     ?>
                     <div class="btnGO">
                         <button type="submit">ADD TO CART</button>
                     </div>
                     <?php
                         }
-                        else if($userid==""){
+                        else if($userid == "") {
                     ?>
                     <div class="btnGO">
-                        <a onclick="event.preventDefault(); alert('로그인이 필요한 서비스입니다.');">
-                        <!-- <input type="submit" value="ADD TO CART" id="cartBtn"></a> -->
+                    <a onclick="event.preventDefault(); alert('로그인이 필요한 서비스입니다.');">
                         <button type="submit">ADD TO CART</button>
-                        <!-- <a href="../cart.php"><p>ADD TO CART</p></a> -->
                     </div>
                     <?php
                         }
                     ?>
-                </section>
+                </div>
             </form>
             </div>
             <div id="product_review" class="innerCon_small">
@@ -113,7 +110,7 @@
                         <tr>
                             <th>작성자</th>
                             <td id="username">
-                                <?php echo "{$row3['username']}";?>
+                                <?php echo $username;?>
                             </td>
                             <th>평가</th>
                             <td>
@@ -131,7 +128,6 @@
                             </td>
                             <td class="btn">
                                 <input type="submit" value="등록" />
-                                <!-- <input type="reset" value="취소" /> -->
                             </td>
                         </tr>
                     </table>

@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../css/product.css?after">
     <link rel="stylesheet" href="../css/login.css?after">
     <link rel="stylesheet" href="../css/join.css?after">
-    <link rel="stylesheet" href="../css/about.css?after">
+    <link rel="stylesheet" href="../css/about.css">
     <link rel="stylesheet" href="../css/qna.css?after">
     <link rel="stylesheet" href="../css/cart.css">
     <script src="../js/main.js" defer></script>

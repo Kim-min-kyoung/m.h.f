@@ -1,9 +1,14 @@
 #qna_top {
   padding: 0 20px;
   margin: 60px 16px 40px 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 #qna_top h1 {
   font-size: 22px;
   text-align: center;
@@ -15,28 +20,33 @@
   width: 100%;
   text-align: center;
 }
+
 #qna_table tr {
   height: 40px;
 }
+
 #qna_table tr th {
   font-weight: normal;
   background-color: #333;
   color: #fff;
   margin-bottom: 30px;
 }
+
 #qna_table tr #review_title {
   text-align: left;
   padding-left: 40px;
   width: 50%;
 }
+
 #qna_table .innerCell {
   height: 60px;
-  border-bottom: 1px dashed #ccc;
+  border-bottom: 1px dashed  #ccc;
 }
 
 #qna_inner #create_title h1 {
   font-size: 22px;
 }
+
 #qna_inner #create_title p {
   font-size: 14px;
   padding-left: 20px;
@@ -45,27 +55,37 @@
 }
 
 #qna_main {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-#qna_main section {
+
+#qna_main .qna_div {
   width: 800px;
 }
-#qna_main section .inner_title {
+
+#qna_main .qna_div .inner_title {
   margin: 40px 0;
 }
-#qna_main section .inner_title h2 {
+
+#qna_main .qna_div .inner_title h2 {
   font-size: 18px;
 }
-#qna_main section .inner_title p {
+
+#qna_main .qna_div .inner_title p {
   color: #3d3d3d;
   font-size: 13px;
   line-height: 2;
 }
-#qna_main section .tpl_policy {
+
+#qna_main .qna_div .tpl_policy {
   font-size: 13px;
 }
-#qna_main section .tpl_policy dd {
+
+#qna_main .qna_div .tpl_policy dd {
   width: 600px;
   height: 200px;
   overflow-y: scroll;
@@ -73,12 +93,18 @@
   padding: 20px;
   background: #fff;
 }
-#qna_main section .tpl_policy .inputfix {
+
+#qna_main .qna_div .tpl_policy .inputfix {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 10px 0 30px 0;
 }
-#qna_main section .tpl_policy input {
+
+#qna_main .qna_div .tpl_policy input {
   margin-right: 5px;
 }
 
@@ -86,33 +112,41 @@
   border-collapse: collapse;
   margin: 30px 0;
 }
+
 #qna_Ctable tr {
   height: 70px;
 }
+
 #qna_Ctable tr th {
   width: 140px;
   font-weight: bold;
   text-align: left;
   padding-left: 20px;
 }
+
 #qna_Ctable tr td {
   padding-left: 20px;
 }
+
 #qna_Ctable tr td #prd_content {
   border-radius: 3px;
 }
-#qna_Ctable tr td input[type=text] {
+
+#qna_Ctable tr td input[type="text"] {
   height: 30px;
   width: 490px;
   padding-left: 5px;
   border-radius: 3px;
 }
+
 #qna_Ctable tr td textarea {
   border-radius: 3px;
 }
+
 #qna_Ctable tr .btn {
   height: 150px;
 }
+
 #qna_Ctable tr .btn input {
   cursor: pointer;
   border: none;
@@ -121,8 +155,10 @@
   color: #fff;
   padding: 7px 24px;
   margin-right: 10px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+
 #qna_Ctable tr .btn input:hover {
   background-color: #d72020;
   font-weight: bold;
@@ -133,9 +169,11 @@
   margin: 30px auto;
   width: 100%;
 }
+
 #qna_view_table tr {
   height: 70px;
 }
+
 #qna_view_table tr th {
   width: 300px;
   font-weight: bold;
@@ -143,28 +181,37 @@
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
 }
+
 #qna_view_table tr td {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   padding-left: 30px;
   width: 70%;
 }
+
 #qna_view_table tr td img {
   width: 200px;
 }
+
 #qna_view_table .contentCell {
   text-align: left;
   height: 100%;
 }
+
 #qna_view_table .contentCell td {
   padding: 30px 150px;
 }
 
 .qnaBtn {
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .qnaBtn span, .qnaBtn button {
   display: block;
   border: none;
@@ -173,11 +220,13 @@
   color: #fff;
   width: 100px;
   height: 40px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   line-height: 40px;
   font-size: 14px;
   margin-right: 10px;
 }
+
 .qnaBtn span:hover, .qnaBtn button:hover {
   background-color: #333;
   color: #fff;
@@ -187,6 +236,7 @@
   margin-top: 40px;
   text-align: left;
 }
+
 .btnGO p {
   display: inline-block;
   border: none;
@@ -194,8 +244,10 @@
   background-color: #ddd;
   color: #7c7c7c;
   padding: 7px 20px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+
 .btnGO p:hover {
   background-color: #aaa;
   color: #fff;
@@ -207,35 +259,49 @@
     padding: 0 10px;
   }
   #qna_inner #qna_main {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
+
 @media screen and (min-width: 680px) and (max-width: 839px) {
   #qna_inner {
     font-size: 13px;
     padding: 0 10px;
   }
   #qna_inner #qna_main {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
+
 @media screen and (min-width: 380px) and (max-width: 679px) {
   #qna_top {
     padding: 0 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   #qna_top h1 {
     font-size: 16px;
     text-align: center;
   }
-
   #qna_inner {
     font-size: 13px;
     padding: 0 10px;
   }
   #qna_inner #qna_main {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   #qna_inner #qna_view_table .contentCell td {
     padding: 20px 60px;
@@ -246,3 +312,4 @@
     line-height: 30px;
   }
 }
+/*# sourceMappingURL=qna.css.map */

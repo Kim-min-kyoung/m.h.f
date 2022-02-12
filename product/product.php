@@ -31,22 +31,28 @@
                         <li><a href="product_cooking.php">COOKING</a></li>
                     </ul>
                 </div>
-                <!-- <div id="right_top">
-                    <ul>
-                        <li>name</li>
-                        <li>new</li>
-                        <li>price</li>
-                    </ul>
-                </div> -->
             </div>
             <div id="product">
                 <div id="product-list">
                     <?php showlist(); ?>
                 </div>
             </div>
+            <?php
+                if($userid == "admin") {
+            ?>
             <div class="btnGO">
                 <a href="product_write.php"><p>상품 등록</p></a>
             </div>
+            <?php
+                }
+                else {
+            ?>
+            <div class="btnGO hidden">
+                <a href="product_write.php"><p>상품 등록</p></a>
+            </div>
+            <?php
+                }
+            ?>
         </div>
     </main>
     <?php include_once '../include/footer.php' ?>   

@@ -93,20 +93,11 @@
                 <img src="img/main_banner01.jpg">
                 <img src="img/main_banner02_edit.jpg">
                 <img src="img/main_banner03_edit2.jpg">
-                <!-- <img src="img/main_banner04.jpeg"> -->
-                <!-- <div id="main_text">
-                    <h1>
-                        MINIMAL&<br/>TRENDY LIGHTS
-                    </h1>
-                    <p>컬러를 포인트를 준 미니멀 디자인</p>
-                    <p id="main_btn">shop now</p>
-                </div> -->
-                </img>
             </div>
         </div>
         <div id="main_select">
             <div class="main_menu" id="menu_01">
-                <img src="img/select_01.png">
+                <img src="img/select5.jpg">
                 <div class="menu_contents">
                     <a href="product/product_lighting.php">
                         <p class="title">Lighting</p>
@@ -115,7 +106,7 @@
                 </div>
             </div>
             <div class="main_menu" id="menu_02">
-                <img src="img/select_02.jpg"></img>
+                <img src="img/select7.jpg"></img>
                 <div class="menu_contents">
                     <a href="product/product_furnishing.php">
                         <p class="title">Furnishing</p>
@@ -124,7 +115,7 @@
                 </div>
             </div>
             <div class="main_menu" id="menu_03">
-            <img src="img/product/cup_01.jpg"></img>
+            <img src="img/select9.jpg"></img>
                 <div class="menu_contents">
                     <a href="product/product.php">
                         <p class="title">Cooking</p>

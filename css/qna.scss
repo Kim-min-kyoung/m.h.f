@@ -48,7 +48,7 @@
 #qna_main {
     display: flex;
     justify-content: center;
-    section {
+    .qna_div {
         width: 800px;
         .inner_title {
             margin: 40px 0;

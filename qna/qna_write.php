@@ -12,7 +12,7 @@
                 <p>m.h.f에 관하여 궁금한 점을 남겨주시면 최대한 빠르게 답변드리겠습니다.</p>
             </div>
             <div id="qna_main">
-                <section id="left">
+                <div id="left" class="qna_div">
                     <div class="inner_title">
                         <h2>개인정보 수집 및 이용 동의</h2>
                     </div>
@@ -41,25 +41,26 @@
                             - 점심시간 12:30~13:30, 토/일/공휴일 상담실 휴무
                         </p>
                     </div>
-                </section>
-                <section id="right">
+                </div>
+                <div id="right" class="qna_div">
                     <div class="inner_title">
                         <h2>문의내용 입력</h2>
                     </div>
                     <form action="../process/qna_write_process.php" method="post" enctype="multipart/form-data">
                     <input type="hidden" name="custom_id" value="<?= $row['custom_id'] ?>">
+                    <input type="hidden" name="username" value="<?=$row3['username']?>">
                         <table id="qna_Ctable"> 
                             <tr>
                                 <th>이름</th>
-                                <td><?php echo "{$row['username']}";?></td>
+                                <td><?php echo "{$_SESSION['username']}";?></td>
                             </tr>
                             <tr>
                                 <th>이메일</th>
-                                <td><?php echo "{$row['email']}";?></td>
+                                <td><?php echo "{$_SESSION['email']}";?></td>
                             </tr>
                             <tr>
                                 <th>전화번호</th>
-                                <td><?php echo "{$row['tel']}";?></td>
+                                <td><?php echo "{$_SESSION['tel']}";?></td>
                             </tr>
                             <tr>
                                 <th>제목</th>
@@ -83,7 +84,7 @@
                             </tr>
                         </table>
                     </form>
-                </section>
+                </div>
             </div>
         </div>
     </main>

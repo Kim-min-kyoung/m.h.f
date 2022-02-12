@@ -9,6 +9,7 @@
   padding-bottom: 30px;
   height: 150px;
 }
+
 #sub_title h1 {
   text-align: left;
   font-size: 22px;
@@ -26,15 +27,22 @@
 #login_table {
   margin: 0 auto;
 }
+
 #login_table tr, #login_table td {
   padding: 20px;
 }
+
 #login_table td ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: right;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
   margin-right: -90px;
 }
-#login_table input[type=text], #login_table input[type=password] {
+
+#login_table input[type="text"], #login_table input[type="password"] {
   height: 40px;
   width: 350px;
   background-color: #eee;
@@ -42,10 +50,12 @@
   border-radius: 3px;
   padding-left: 20px;
 }
+
 #login_table .td_header {
   font-weight: bold;
   font-size: 16px;
 }
+
 #login_table #loginBtn {
   padding: 30px 20px;
   border: none;
@@ -53,14 +63,18 @@
   background-color: #1b1b1b;
   color: #fff;
   cursor: pointer;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+
 #login_table #loginBtn:hover {
   background-color: #d72020;
 }
+
 #login_table #checkForm {
   font-size: 13px;
 }
+
 #login_table #checkForm li {
   margin-left: 10px;
 }
@@ -69,6 +83,7 @@
   width: 850px;
   margin: 80px auto;
 }
+
 #loginSns h2 {
   float: left;
   width: 105px;
@@ -76,20 +91,26 @@
   margin-right: 15px;
   font-size: 16px;
 }
+
 #loginSns ul {
   float: left;
   margin-left: -15px;
 }
+
 #loginSns ul li {
   float: left;
   position: relative;
   text-align: center;
   text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 #loginSns ul li img {
   width: 32px;
 }
+
 #loginSns ul a {
   display: block;
   padding: 2px 16px;
@@ -121,3 +142,4 @@
     line-height: 22px;
   }
 }
+/*# sourceMappingURL=login.css.map */
