@@ -2,7 +2,6 @@
     session_start();
 
     $conn=mysqli_connect('localhost','root','1234','mhf');
-    //  var_dump($_POST);
     $id=$_POST['id'];
     $sql="DELETE from cart WHERE id='$id'";
 

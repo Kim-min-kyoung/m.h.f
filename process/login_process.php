@@ -50,7 +50,6 @@
     }
     else {
         echo "session fail";
-        // echo ("<meta http-equiv='Refresh' content='0; URL=login.php'>");
     }
     }
     else {

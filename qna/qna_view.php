@@ -1,5 +1,4 @@
 <?php
-    // echo $_GET['no'];
     $conn = mysqli_connect('localhost', 'root', '1234', 'mhf');
 
     $sql = "select * from board_ask where num={$_GET['no']}";
@@ -41,7 +40,6 @@
                 </div>           
             </div>
             <div class="qnaBtn">
-                <!-- <span><a href="./qna_update.php?no=<?=$_GET['no']?>">수정</a></span> -->
                 <input type="hidden" name="no" value="<?=$_GET['no']?>">
                     <button>수정</button>
                 </form>

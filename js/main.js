@@ -5,12 +5,9 @@ window.addEventListener('scroll',function(){
   let windowTop = window.scrollY;
   console.log('여기');
   console.log(windowTop);
-  // 스크롤 세로값이 헤더높이보다 크거나 같으면 
-	// 헤더에 클래스 'drop'을 추가
   if (windowTop >= headerHeight) {
     header.classList.add("drop");
   } 
-  // 아니면 클래스 'drop'을 제거
   else {
     header.classList.remove("drop");
   }
@@ -22,25 +19,10 @@ let closeMenu = document.querySelector('#closeIcon');
 let sideMenu = document.querySelector('.side_menu');
 openMenu.addEventListener('click', function(){
     sideMenu.classList.add('on');
-    // document.querySelector('.blackbg').classList.add('on');
 })
 closeMenu.addEventListener('click', function(){
     sideMenu.classList.remove('on');
-    // document.querySelector('.blackbg').classList.remove('on');
 })
-
-/* serach modal */
-// const open = () => {
-//   document.querySelector(".modal").classList.remove("hidden");
-// }
-
-// const close = () => {
-//   document.querySelector(".modal").classList.add("hidden");
-// }
-
-// document.querySelector(".openBtn").addEventListener("click", open);
-// document.querySelector(".closeBtn").addEventListener("click", close);
-// document.querySelector(".bg").addEventListener("click", close);
 
 /* review */
 let reviewDiv = true;
@@ -53,22 +35,17 @@ function reviewTable() {
     con.style.display = 'none';
   }
 }
-// 삭제
-
 
 /* main banner */
 function Slider(target, type) {
   // 상태
   let index = 1;
   let isMoved = true;
-  const speed = 3000; // ms
+  const speed = 3000;
 
   // 방향
   const transform = "transform " + speed / 1000 + "s";
   let translate = (i) => "translateX(-" + 100 * i + "%)";
-  // if (type === "V") {
-  //   translate = (i) => "translateY(-" + 100 * i + "%)";
-  // }
 
   // 슬라이더
   const slider = document.querySelector('.slidebox');
@@ -78,9 +55,7 @@ function Slider(target, type) {
   // 슬라이더 화면 컨테이너
   const container = document.createElement("div");
   container.style["display"] = "flex";
-  // container.style["flex-direction"] = type === "V" ? "column" : "row";
   container.style["width"] = sliderRects.width + "px";
-  // container.style["height"] = sliderRects.height + "px";
   container.style["transform"] = translate(index);
 
   // 슬라이더 화면 목록
@@ -98,7 +73,7 @@ function Slider(target, type) {
     container.appendChild(box.cloneNode(true));
   }
 
-  // 처음/마지막 화면 눈속임 이벤트
+  // 처음,마지막 화면 눈속임 이벤트
   container.addEventListener("transitionstart", function () {
     isMoved = false;
     setTimeout(() => {
@@ -106,13 +81,11 @@ function Slider(target, type) {
     }, speed);
   });
   container.addEventListener("transitionend", function () {
-    // 처음으로 순간이동
     if (index === size - 1) {
       index = 1;
       container.style["transition"] = "none";
       container.style["transform"] = translate(index);
     }
-    // 끝으로 순간이동
     if (index === 0) {
       index = size - 2;
       container.style["transition"] = "none";
@@ -206,7 +179,6 @@ function change() {
   sum.value = calc.toLocaleString();
   console.log(sum.value)
 }
-
 
 /* cart check */
 function checkAll(checked) {

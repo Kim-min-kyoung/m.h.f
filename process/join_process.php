@@ -1,5 +1,4 @@
 <?php
-    // var_dump($_POST);
     $conn = mysqli_connect('localhost','root','1234','mhf');
     $username = $_POST['username'];
     $userid = $_POST['userid'];

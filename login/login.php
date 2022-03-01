@@ -43,14 +43,6 @@
                 </ul>
             </div>
             <div id="logincont_inner"></div>
-            <!-- <div id="loginJoin">
-                <div id="joinncont_inner"></div>
-                <p>아직 m.h.f의 회원이 아니신가요?</p>
-                <p>회원가입하고 다양한 혜택과 서비스를 이용해보세요!</p>
-                <div class="joinBtn">
-                    <p>카카오톡 1초 회원가입</p>
-                </div>
-            </div> -->
         </div>
     </main>
     <?php include_once '../include/footer.php' ?>   

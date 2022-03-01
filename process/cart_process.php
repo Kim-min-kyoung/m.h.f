@@ -26,7 +26,7 @@
     $row = mysqli_fetch_array($result);
     $custom_id = $row['custom_id'];
 
-    if($result->num_rows>=1){
+    if($result -> num_rows >= 1){
         $sql2="INSERT INTO cart(prd_num,prd_id,custom_id, total_price)
             VALUES(
                 '$prd_num',
@@ -36,9 +36,8 @@
                 )
             ";
         echo $sql2;
-        $result2=mysqli_query($conn,$sql2);
+        $result2 = mysqli_query($conn, $sql2);
         if($result2 === true){
-        //  echo "성공";
         header("Location:../cart/cart.php");
         }
         else{

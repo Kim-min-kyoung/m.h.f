@@ -1,5 +1,4 @@
 <?php
-//  echo $_GET['no'];
     $conn = mysqli_connect('localhost', 'root', '1234', 'mhf');
 ?>
 <?php include_once '../include/header.php' ?>
@@ -33,7 +32,6 @@
 
                     while($row2 = mysqli_fetch_array($result2)) {
                         $id = $row2['id'];
-                        // echo "<tr>";
                         $sql3 = "SELECT * from product
                                 where prd_id = {$row2['prd_id']}";
                         $result3 = mysqli_query($conn, $sql3);
@@ -41,7 +39,6 @@
                         while($row3 = mysqli_fetch_array($result3)) {
                             echo "<tr>";
                             echo "<td><input name='check[]' id='chk' type=checkbox value={$row2['total_price']}></td>";
-                            // echo $row2['total_price'];
                             if($row3['prd_photo']) { 
                                 $prd_photo=$row3['prd_photo']; 
                                 echo "<td class=\"img_cell\"><img class='products_cart' src='".$prd_photo."' /></td>"; }
