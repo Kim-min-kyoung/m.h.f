@@ -25,22 +25,18 @@
             padding-left: 20px;
             width: 150px;
             text-align: left;
-            // background-color: #eee;
-            // font-weight: normal;
         }
         td {
             padding-left: 20px;
             margin: 10px 0;
             width: 400px;
             input {
-                // border: 1px solid #ccc;
                 border-radius: 3px;
             }
             input[type="text"], input[type="password"] {
                 height: 40px;
                 width: 250px;
                 padding-left: 15px;
-                background-color: transparent;
                 border: 1px solid #ccc;
             }
             input[type="button"] {
