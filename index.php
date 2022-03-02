@@ -1,3 +1,6 @@
+<?
+    header('Location: /index.html');
+?>
 <?php
     session_start();
     if(isset($_SESSION['userid'])){
