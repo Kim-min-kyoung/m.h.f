@@ -1,5 +1,5 @@
 <?php
-    $conn = mysqli_connect('localhost', 'root', '1234', 'mhf');
+    $conn = mysqli_connect('localhost', 'minkyoung', 'alsrud12!', 'minkyoung');
     $sqlstr = "delete from product
                 where prd_id = {$_POST['no']}";
     $result = mysqli_query($conn, $sqlstr);

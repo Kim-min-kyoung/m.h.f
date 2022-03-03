@@ -23,7 +23,7 @@
             }
         }
     }
-    $conn = mysqli_connect('localhost', 'root', '1234', 'mhf');
+    $conn = mysqli_connect('localhost', 'minkyoung', 'alsrud12!', 'minkyoung');
     $sqlstr = "insert into board_ask(ask_photo, ask_title, ask_content, ask_date, custom_id)
                values('{$resFile}', '{$_POST['ask_title']}', '{$_POST['ask_content']}', now(), '{$_POST['custom_id']}')";
     echo $sqlstr;

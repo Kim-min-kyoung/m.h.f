@@ -1,5 +1,5 @@
 <?php
-    $conn = mysqli_connect('localhost', 'root', '1234', 'mhf');
+    $conn = mysqli_connect('localhost', 'minkyoung', 'alsrud12!', 'minkyoung');
     $sqlstr3 = "select * from product where prd_group = 'FURNISHING' order by prd_name asc";
     $result3 = mysqli_query($conn, $sqlstr3);
     function showlist(){

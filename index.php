@@ -7,7 +7,7 @@
     }
     else $userid="";
 
-    $conn = mysqli_connect('localhost', 'root', '1234', 'mhf');
+    $conn = mysqli_connect('localhost', 'minkyoung', 'alsrud12!', 'minkyoung');
     $sql = "select * from product";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_array($result);

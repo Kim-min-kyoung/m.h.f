@@ -1,6 +1,6 @@
 // 데이터베이스 생성
-CREATE DATABASE mhf;
-use mhf;
+CREATE DATABASE minkyoung;
+use minkyoung;
 
 // 테이블 생성
 // 회원가입

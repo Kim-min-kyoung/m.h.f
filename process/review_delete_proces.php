@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    $conn = mysqli_connect('localhost','root','1234','mhf');
+    $conn = mysqli_connect('localhost','minkyoung','alsrud12!','minkyoung');
     $id = $_POST['id'];
     $sql = "DELETE from board_review WHERE id='$id'";
 

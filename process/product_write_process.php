@@ -23,7 +23,7 @@
             }
         }
     }
-    $conn = mysqli_connect('localhost', 'root', '1234', 'mhf');
+    $conn = mysqli_connect('localhost', 'minkyoung', 'alsrud12!', 'minkyoung');
     $sqlstr = "insert into product(prd_photo, prd_name, prd_price, prd_content, prd_group)
                values('{$resFile}', '{$_POST['prd_name']}', '{$_POST['prd_price']}', '{$_POST['prd_content']}', '{$_POST['prd_group']}')";
     echo $sqlstr;

@@ -1,5 +1,5 @@
 <?php
-    $conn = mysqli_connect('localhost', 'root', '1234', 'mhf');
+    $conn = mysqli_connect('localhost', 'minkyoung', 'alsrud12!', 'minkyoung');
     $sql = "select * from product where prd_id={$_GET['no']}";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_array($result);

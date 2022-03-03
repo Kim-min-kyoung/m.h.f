@@ -23,7 +23,7 @@
         }
     }
 
-    $conn = mysqli_connect('localhost', 'root', '1234', 'mhf');
+    $conn = mysqli_connect('localhost', 'minkyoung', 'alsrud12!', 'minkyoung');
     $sqlstr = "update board_ask 
                 set ask_title='{$_POST['ask_title']}',
                 ask_content='{$_POST['ask_content']}',
