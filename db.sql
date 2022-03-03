@@ -49,19 +49,6 @@ create table board_review(
     FOREIGN KEY(custom_id) REFERENCES member(custom_id),
     FOREIGN KEY(prd_id) REFERENCES product(prd_id)
 )
--- create table board_review(
---     id int primary key auto_increment,
---     name varchar(20) not null,
---     rating varchar(5) not null,
---     review_title varchar(30) not null,
---     review_content text not null,
---     wdate datetime not null,
---     prd_id int,
---     custom_id int,
---     review_photo varchar(100),
---     FOREIGN KEY(custom_id) REFERENCES member(custom_id),
---     FOREIGN KEY(prd_id) REFERENCES product(prd_id)
--- )
 
 select * from board_review order by id desc limit 10,10;
 
@@ -75,7 +62,3 @@ create table cart(
     FOREIGN KEY(custom_id) REFERENCES member(custom_id),
     FOREIGN KEY(prd_id) REFERENCES product(prd_id)
 );
-
-// 상품 추가 ex)
-INSERT INTO product(prd_name,prd_price, prd_photo) 
-VALUES ('해당 사항 없음',0,0,'/treesoap/img/logo.png');
